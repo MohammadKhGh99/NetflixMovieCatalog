@@ -5,4 +5,4 @@ rm -f mykey.pem
 # kill the process that hold 8080 port
 kill -9 "$(sudo lsof -t -i :8080)"
 # run the app
-nohup python3 app.py > /dev/null &
+nohup python3 app.py > /dev/null 2>&1 &
