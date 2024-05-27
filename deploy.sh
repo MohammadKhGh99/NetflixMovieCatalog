@@ -4,7 +4,7 @@
 rm -f mykey.pem
 # kill the process that hold 8080 port
 PID=$(sudo lsof -t -i :8080)
-if [ $PID != "" ]; then
+if [ "$PID" != "" ]; then
   kill -9 "$(sudo lsof -t -i :8080)"
 fi
 # run the app
